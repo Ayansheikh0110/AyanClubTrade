@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AyanClubTrade | Admin Demo</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="brand">Ayan<span>ClubTrade</span></div><a class="outline" href="index.html">Website</a></header>
+<main class="admin">
+<section class="section">
+<span class="pill">ADMIN DEMO</span><h1>Referral Overview</h1>
+<div class="stats big">
+<div><small>Total Users</small><b id="users">1</b></div>
+<div><small>Referrals</small><b id="refs">0</b></div>
+<div><small>Approved Rewards</small><b id="approved">₹0</b></div>
+<div><small>Pending Rewards</small><b id="pending">₹0</b></div>
+</div>
+<div class="table-wrap">
+<table><thead><tr><th>User</th><th>Referral Code</th><th>Referrals</th><th>Approved</th><th>Status</th></tr></thead>
+<tbody id="rows"></tbody></table>
+</div>
+</section>
+</main>
+<script>
+const data=JSON.parse(localStorage.getItem('aycUser')||'null');
+const users=data?[data]:[];
+document.getElementById('users').textContent=users.length||1;
+document.getElementById('refs').textContent=data?.referrals||0;
+document.getElementById('approved').textContent='₹'+(data?.approved||0);
+document.getElementById('pending').textContent='₹'+(data?.pending||0);
+document.getElementById('rows').innerHTML=users.length?users.map(u=>`<tr><td>${u.name}</td><td>${u.code}</td><td>${u.referrals}</td><td>₹${u.approved}</td><td>${u.status}</td></tr>`).join(''):`<tr><td colspan="5">No demo user yet. Create an account from the website.</td></tr>`;
+</script>
+</body></html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AyanClubTrade | Refer & Earn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="brand">Ayan<span>ClubTrade</span></div>
+  <button class="outline" onclick="openLogin()">Login</button>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="pill">REFER & EARN</span>
+    <h1>Invite friends.<br><span>Earn rewards.</span></h1>
+    <p>Share your referral link and earn eligible rewards when your invited friends complete the required steps.</p>
+    <div class="hero-actions">
+      <button class="primary" onclick="openSignup()">Create Account</button>
+      <button class="secondary" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it works</button>
+    </div>
+    <small>Demo reward range: ₹100–₹500. Actual rewards depend on program rules.</small>
+  </div>
+  <div class="hero-card">
+    <div class="coin">₹</div>
+    <h3>Referral Bonus</h3>
+    <strong>₹100 – ₹500</strong>
+    <p>per eligible referral</p>
+    <div class="mini">✓ Simple tracking<br>✓ Mobile friendly<br>✓ Reward status</div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <h2>How AyanClubTrade works</h2>
+  <div class="steps">
+    <div class="step"><b>01</b><h3>Join</h3><p>Create your free account.</p></div>
+    <div class="step"><b>02</b><h3>Share</h3><p>Copy your unique referral link.</p></div>
+    <div class="step"><b>03</b><h3>Refer</h3><p>Your friend signs up through your link.</p></div>
+    <div class="step"><b>04</b><h3>Reward</h3><p>Eligible rewards appear after verification.</p></div>
+  </div>
+</section>
+
+<section class="section dashboard-preview">
+  <div>
+    <span class="pill">DASHBOARD</span>
+    <h2>Your referral progress in one place</h2>
+    <p>Track referrals, pending rewards and approved rewards from your account.</p>
+  </div>
+  <div class="stats">
+    <div><small>Referrals</small><b id="previewRefs">0</b></div>
+    <div><small>Approved</small><b id="previewEarn">₹0</b></div>
+    <div><small>Pending</small><b id="previewPending">₹0</b></div>
+  </div>
+</section>
+
+<section class="section faq">
+  <h2>Important information</h2>
+  <p>Rewards are promotional incentives, not guaranteed income. Eligibility, verification and payout conditions should be published clearly in the program's terms.</p>
+</section>
+</main>
+
+<footer>
+  <b>AyanClubTrade</b><span>© 2026 All rights reserved.</span>
+  <a href="admin.html">Admin Demo</a>
+</footer>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
